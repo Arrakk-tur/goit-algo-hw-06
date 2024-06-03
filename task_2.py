@@ -4,10 +4,6 @@ from task_1 import (G,
                     graph_vizualization,
                     labels)
 
-# import task_1
-
-# Граф з задачі 1
-# G = task_1.G
 
 # Визначимо вершини для пошуку шляху
 start_node = 1
@@ -31,7 +27,6 @@ pos = nx.spring_layout(G)
 plt.figure(figsize=(14, 7))
 
 # Оригінальний граф
-# labels = task_1.labels
 graph_vizualization(title="Оригінальний граф")
 
 # Граф з виділеними шляхами
