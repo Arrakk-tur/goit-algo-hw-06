@@ -24,22 +24,29 @@ G.add_edges_from([
     (2, 4)
 ])
 
-# Візуалізація графу
-pos = nx.spring_layout(G)  # Розташування вершин
 labels = nx.get_node_attributes(G, 'name')
-nx.draw(G,
-        pos,
-        with_labels=True,
-        labels=labels,
-        node_size=700,
-        node_color="skyblue",
-        font_size=10,
-        font_color="black",
-        font_weight="bold",
-        edge_color="gray")
 
-plt.title("Транспортна мережа міста")
-plt.show()
+
+# Візуалізація графу
+def graph_vizualization(title: str):
+    pos = nx.spring_layout(G)  # Розташування вершин
+    nx.draw(G,
+            pos,
+            with_labels=True,
+            labels=labels,
+            node_size=700,
+            node_color="skyblue",
+            font_size=10,
+            font_color="black",
+            font_weight="bold",
+            edge_color="gray")
+
+    plt.title(title)
+    plt.show()
+
+
+# Виведемо граф
+graph_vizualization(title="Транспортна мережа міста")
 
 # Аналіз основних характеристик
 num_nodes = G.number_of_nodes()
